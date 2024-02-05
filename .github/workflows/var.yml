@@ -12,4 +12,4 @@ jobs:
   
     steps:
       - name: write into console
-        run: echo "hello world"
+        run: echo hello world
