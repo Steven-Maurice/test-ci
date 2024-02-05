@@ -13,3 +13,8 @@ jobs:
     steps:
       - name: write into console
         run: echo hello world
+
+      - name: write with env
+        run: |
+          echo "ma variable secret ${{ secrets.VAR}}"
+          echo "ma variable env ${{ vars.VAR }}"
