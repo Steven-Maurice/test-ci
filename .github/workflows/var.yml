@@ -1,0 +1,16 @@
+name: test-var
+
+on: 
+  - push
+  - pull_request
+
+jobs:
+  ecriture-console:
+    runs-on: ubuntu:latest
+  
+    steps:
+      - name: write into console
+        run: echo "hello world"
+
+      - name: write with env
+        run: echo "ma variable $secret.VAR"
