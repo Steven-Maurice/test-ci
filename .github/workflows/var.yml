@@ -7,10 +7,14 @@ on:
 jobs:
   ecriture-console:
     runs-on: ubuntu:latest
+
+    environment: DEV
   
     steps:
       - name: write into console
         run: echo "hello world"
 
       - name: write with env
-        run: echo "ma variable $secret.VAR"
+        run: |
+          echo "ma variable secret ${{ secret.VAR}}"
+          echo "ma variable env ${{ var.var }}"
